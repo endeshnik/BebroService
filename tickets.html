@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebroservice | Система Тікетів</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-overlay"></div>
+
+    <nav class="navbar">
+        <div class="logo">BEBRO<span>SERVICE</span></div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">На головну</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="form-section" class="fade-in">
+            <div class="glass-card">
+                <h1>Створити Тікет</h1>
+                <p class="subtitle">Приєднуйтесь до Бебра-сервісу</p>
+
+                <form id="ticketForm">
+                    <div class="input-group">
+                        <label for="title">Заголовок</label>
+                        <input type="text" id="title" placeholder="Проблема з доступом..." required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="description">Опис тікету</label>
+                        <textarea id="description" rows="4" placeholder="Детально опишіть вашу проблему..."
+                            required></textarea>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="sender">Ваш Telegram Username</label>
+                            <div class="input-with-prefix">
+                                <span>@</span>
+                                <input type="text" id="sender" placeholder="username" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="recipient">Кому відправити</label>
+                            <select id="recipient" required>
+                                <option value="" disabled selected>Виберіть отримувача</option>
+                                <option value="Журналіст(Жека)">Журналіст (Жека)</option>
+                                <option value="ТехПідтримка(Саньок)">ТехПідтримка (Саньок)</option>
+                                <option value="Єблан для теста">Диктатор всея Бебриків(меля)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Відправити Тікет</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Bebroservice. Всі права захищено.</p>
+    </footer>
+
+    <div id="success-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="checkmark-circle">
+                <div class="checkmark"></div>
+            </div>
+            <h2>Тікет Відправлено!</h2>
+            <p>Ваш запит надіслано на розгляд адміну.</p>
+            <button onclick="closeModal()">Зрозуміло</button>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

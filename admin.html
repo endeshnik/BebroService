@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebroservice | Адмін Панель</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-body">
+    <div class="background-overlay"></div>
+
+    <nav class="navbar">
+        <div class="logo">BEBRO<span>ADMIN</span></div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">На головну</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="login-section" class="fade-in">
+            <div class="glass-card">
+                <h1>Вхід в Адмін-панель</h1>
+                <p class="subtitle">Введіть пароль для доступу до тікетів</p>
+                <div class="input-group">
+                    <input type="password" id="adminPassword" placeholder="Пароль...">
+                </div>
+                <button onclick="checkAccess()" class="submit-btn">Увійти</button>
+            </div>
+        </section>
+
+        <section id="admin-content" class="hidden fade-in">
+            <div class="glass-card wide">
+                <div class="admin-header">
+                    <h1>Черга Розгляду</h1>
+                    <span id="ticket-count" class="badge">0</span>
+                </div>
+                <div id="tickets-container" class="tickets-grid">
+                    <p class="empty-msg">Завантаження...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>

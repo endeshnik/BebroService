@@ -1,0 +1,5 @@
+const CONFIG = {
+    BOT_TOKEN: '8283982914:AAH0qZHuCnhJ_PbmM3mtJVWZvEF1iuWeevg',
+    ADMIN_CHAT_ID: '1148148294',
+    ADMIN_PASSWORD: 'bebra2026'
+};
